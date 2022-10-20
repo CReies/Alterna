@@ -2,7 +2,7 @@ export function setupHeader(el: HTMLElement) {
 	el.innerHTML = `
 			<div class="logo-container">
 				<img
-					src="public/assets/img/logo.jpeg"
+					src="src/assets/img/logo.jpeg"
 					alt="alterna logo"
 					class="logo" />
 			</div>

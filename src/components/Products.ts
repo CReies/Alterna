@@ -14,13 +14,13 @@ export function setupProducts(el: HTMLElement) {
 
 	for (let i = 0; i < 13; i++) {
 		if (i <= 4) {
-			clockImgsPaths.push(`public/assets/img/clock${i + 1}.jpeg`);
+			clockImgsPaths.push(`src/assets/img/clock${i + 1}.jpeg`);
 		}
 		if (i <= 5) {
-			mugImgsPaths.push(`public/assets/img/mug${i + 1}.jpeg`);
+			mugImgsPaths.push(`src/assets/img/mug${i + 1}.jpeg`);
 		}
 		if (i <= 13) {
-			posterImgsPaths.push(`public/assets/img/poster${i + 1}.jpeg`);
+			posterImgsPaths.push(`src/assets/img/poster${i + 1}.jpeg`);
 		}
 	}
 

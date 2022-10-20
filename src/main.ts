@@ -1,4 +1,4 @@
-import '../public/assets/css/style.scss';
+import './assets/scss/style.scss';
 import { setupHeader } from './components/Header';
 import { setupMain } from './components/Main';
 import { $ } from './util/functions';

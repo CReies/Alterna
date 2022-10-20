@@ -2,6 +2,11 @@ $primary-color: #42c297;
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
+body {
+	padding: 0;
+	margin: 0;
+}
+
 :root {
 	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
 	font-size: 1em;
@@ -19,12 +24,21 @@ header {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	position: sticky;
+	top: 0px;
+	background-color: #ffffff94;
+	backdrop-filter: blur(12.5px);
+	box-shadow: 0 8px 32px 0 #5656575e;
+	padding: 0;
+	z-index: 1000;
 
 	.logo-container {
-		margin: 0 1.5em;
+		margin: 0.5em 1.5em;
+		display: flex;
+		align-items: center;
 
 		.logo {
-			width: 15em;
+			width: 10em;
 			cursor: pointer;
 		}
 	}
@@ -96,6 +110,7 @@ main {
 				box-shadow: 1em 1em 2em #bebebe, -1em -1em 2em #ffffff inset;
 				cursor: pointer;
 				transition: 0.2s;
+				z-index: 900;
 			}
 
 			.product-img {
@@ -115,6 +130,36 @@ main {
 				flex-direction: row;
 				justify-content: space-evenly;
 			}
+		}
+	}
+
+	section {
+		min-height: 100vh;
+	}
+
+	.history {
+		background-color: #dfdfdf;
+		margin: 0;
+		padding: 3em 2em 1.5em;
+		height: 100%;
+		align-items: center;
+		display: flex;
+
+		h2 {
+			font-size: 3em;
+		}
+
+		h2,
+		h4 {
+			text-align: center;
+		}
+
+		p {
+			line-height: 3;
+			width: 75%;
+			text-align: center;
+			margin: auto;
+			margin-top: 4em;
 		}
 	}
 }
