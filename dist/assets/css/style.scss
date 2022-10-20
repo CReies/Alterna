@@ -1,0 +1,120 @@
+$primary-color: #42c297;
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root {
+	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+	font-weight: 400;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	.logo-container {
+		margin: 0 1.5em;
+
+		.logo {
+			width: 15em;
+			cursor: pointer;
+		}
+	}
+
+	.header-menu-container {
+		margin: auto;
+		.header-menu {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.header-menu-item {
+				list-style: none;
+				margin: 0 1.5em;
+				text-align: center;
+				font-size: 1.5em;
+				font-family: anton, sans-serif;
+
+				&.active {
+					color: $primary-color;
+				}
+
+				&:hover {
+					cursor: pointer;
+					color: $primary-color;
+					transition: 0.2s;
+				}
+			}
+		}
+	}
+}
+
+main {
+	.title {
+		display: flex;
+		justify-content: center;
+	}
+
+	.row {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		margin: 5em 0;
+	}
+
+	img.sample {
+		margin: auto;
+		width: 65vw;
+	}
+
+	.products {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-evenly;
+
+		.card {
+			display: flex;
+			border-radius: 2em;
+			background: #e0e0e0;
+			padding: 1em 2em;
+			box-shadow: 1em 1em 2em #bebebe, -1em -1em 2em #ffffff;
+			flex-direction: column;
+
+			&:hover {
+				transform: scale(1.1);
+				box-shadow: 1em 1em 2em #bebebe, -1em -1em 2em #ffffff inset;
+				cursor: pointer;
+				transition: 0.2s;
+			}
+
+			.product-img {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 1.5em 0;
+				img {
+					border-radius: 2em;
+					width: 10em;
+				}
+			}
+
+			.product-content {
+				margin: 1.5em 0;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+			}
+		}
+	}
+}
