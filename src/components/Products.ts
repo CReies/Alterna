@@ -25,10 +25,10 @@ export function setupProducts(el: HTMLElement) {
 	}
 
 	//! Blanco: $12k | Luminiscente: $15k | Magico: $20k
-	setupProduct($('#mugProduct'), mugImgsPaths, 12000, 'Mug');
+	setupProduct($('#mugProduct'), mugImgsPaths, 12000, 'Mugs');
 
-	setupProduct($('#clockProduct'), clockImgsPaths, 12000, 'Clock');
+	setupProduct($('#clockProduct'), clockImgsPaths, 12000, 'Relojes');
 
 	//! 15x25: $10k | 20x30: $12k | 25x40 = $15k | 50x70: $55k | 100x70: $90k | Poliptico 150x90: $110k
-	setupProduct($('#posterProduct'), posterImgsPaths, 12000, 'Poster');
+	setupProduct($('#posterProduct'), posterImgsPaths, 12000, 'Posters');
 }
