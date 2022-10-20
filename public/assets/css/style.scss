@@ -1,0 +1,62 @@
+$primary-color: #7fffd4;
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root {
+	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+
+	.logo-container {
+		margin: 0 1.5em;
+
+		.logo {
+			width: 18.75em;
+			cursor: pointer;
+		}
+	}
+
+	.header-menu-container {
+		margin: 0 1.5em;
+		.header-menu {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			.header-menu-item {
+				list-style: none;
+				margin: 0 1.5em;
+				text-align: center;
+				font-size: 1.5em;
+				font-family: anton, sans-serif;
+
+				&.active {
+					color: $primary-color;
+				}
+
+				&:hover {
+					cursor: pointer;
+					color: $primary-color;
+					transition: 0.2s;
+				}
+			}
+		}
+	}
+}
