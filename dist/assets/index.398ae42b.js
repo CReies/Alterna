@@ -1,7 +1,53 @@
-(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))s(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const c of t.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&s(c)}).observe(document,{childList:!0,subtree:!0});function a(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?t.credentials="include":e.crossorigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function s(e){if(e.ep)return;e.ep=!0;const t=a(e);fetch(e.href,t)}})();const u=document,r=i=>u.querySelector(i),l=i=>u.querySelectorAll(i),d=i=>`$${new Intl.NumberFormat().format(i)}`;function m(i){const o=a=>{const s=a.target;if(!s)return;const e=l(".menu-item");if(!s.classList.contains("active")){for(const t in e)Object.prototype.hasOwnProperty.call(e,t)&&e[t].classList.remove("active");s.classList.add("active")}};i.innerHTML=`
+(function () {
+	const o = document.createElement('link').relList;
+	if (o && o.supports && o.supports('modulepreload')) return;
+	for (const e of document.querySelectorAll('link[rel="modulepreload"]')) s(e);
+	new MutationObserver(e => {
+		for (const t of e)
+			if (t.type === 'childList')
+				for (const c of t.addedNodes)
+					c.tagName === 'LINK' && c.rel === 'modulepreload' && s(c);
+	}).observe(document, { childList: !0, subtree: !0 });
+	function a(e) {
+		const t = {};
+		return (
+			e.integrity && (t.integrity = e.integrity),
+			e.referrerpolicy && (t.referrerPolicy = e.referrerpolicy),
+			e.crossorigin === 'use-credentials'
+				? (t.credentials = 'include')
+				: e.crossorigin === 'anonymous'
+				? (t.credentials = 'omit')
+				: (t.credentials = 'same-origin'),
+			t
+		);
+	}
+	function s(e) {
+		if (e.ep) return;
+		e.ep = !0;
+		const t = a(e);
+		fetch(e.href, t);
+	}
+})();
+const u = document,
+	r = i => u.querySelector(i),
+	l = i => u.querySelectorAll(i),
+	d = i => `$${new Intl.NumberFormat().format(i)}`;
+function m(i) {
+	const o = a => {
+		const s = a.target;
+		if (!s) return;
+		const e = l('.menu-item');
+		if (!s.classList.contains('active')) {
+			for (const t in e)
+				Object.prototype.hasOwnProperty.call(e, t) &&
+					e[t].classList.remove('active');
+			s.classList.add('active');
+		}
+	};
+	(i.innerHTML = `
 			<div class="logo-container">
 				<img
-					src="src/assets/img/logo.jpeg"
+					src="./assets/img/logo.jpeg"
 					alt="alterna logo"
 					class="logo" />
 			</div>
@@ -18,7 +64,13 @@
 				</nav>
 			</div>
 			<div class="header-social-container"></div>
-	`,l(".menu-item").forEach(a=>{a.addEventListener("click",o)})}function n(i,o,a,s){i.innerHTML=`
+	`),
+		l('.menu-item').forEach(a => {
+			a.addEventListener('click', o);
+		});
+}
+function n(i, o, a, s) {
+	i.innerHTML = `
 		<div class="card">
 			<div class="product-img">
 				<img src="${o[0]}" alt="${s}" />
@@ -27,19 +79,33 @@
 				${s}	a partir de: ${d(a)}</div>
 			</div>
 		</div>
-	`}function p(i){i.innerHTML=`
+	`;
+}
+function p(i) {
+	i.innerHTML = `
 		<div class="product" id="mugProduct"></div>
 		<div class="product" id="clockProduct"></div>
 		<div class="product" id="posterProduct"></div>
-	`;let o=[],a=[],s=[];for(let e=0;e<13;e++)e<=4&&a.push(`src/assets/img/clock${e+1}.jpeg`),e<=5&&o.push(`src/assets/img/mug${e+1}.jpeg`),e<=13&&s.push(`src/assets/img/poster${e+1}.jpeg`);//! Blanco: $12k | Luminiscente: $15k | Magico: $20k
-n(r("#mugProduct"),o,12e3,"Mugs"),n(r("#clockProduct"),a,12e3,"Relojes");//! 15x25: $10k | 20x30: $12k | 25x40 = $15k | 50x70: $55k | 100x70: $90k | Poliptico 150x90: $110k
-n(r("#posterProduct"),s,12e3,"Posters")}function h(i){i.innerHTML=`
+	`;
+	let o = [],
+		a = [],
+		s = [];
+	for (let e = 0; e < 13; e++)
+		e <= 4 && a.push(`./assets/img/clock${e + 1}.jpeg`),
+			e <= 5 && o.push(`./assets/img/mug${e + 1}.jpeg`),
+			e <= 13 && s.push(`./assets/img/poster${e + 1}.jpeg`); //! Blanco: $12k | Luminiscente: $15k | Magico: $20k
+	n(r('#mugProduct'), o, 12e3, 'Mugs'),
+		n(r('#clockProduct'), a, 12e3, 'Relojes'); //! 15x25: $10k | 20x30: $12k | 25x40 = $15k | 50x70: $55k | 100x70: $90k | Poliptico 150x90: $110k
+	n(r('#posterProduct'), s, 12e3, 'Posters');
+}
+function h(i) {
+	(i.innerHTML = `
 		<section class="index" id="index">
 			<div class="title row">
 				<h1>Alterna, Una tienda con estilo</h1>
 			</div>
 			<div class="row">
-				<img src="src/assets/img/sample.jpeg" alt="Muestra" class="sample" />
+				<img src="./assets/img/sample.jpeg" alt="Muestra" class="sample" />
 			</div>
 			<div class="row products" id="products"></div>
 		</section>
@@ -115,7 +181,12 @@ n(r("#posterProduct"),s,12e3,"Posters")}function h(i){i.innerHTML=`
 				officiis possimus!
 			</p>
 		</section>
-	`,p(r("#products"))}document.querySelector("#app").innerHTML=`
+	`),
+		p(r('#products'));
+}
+document.querySelector('#app').innerHTML = `
   <header id="header"></header>
   <main id="main"></main>
-`;m(r("#header"));h(r("#main"));
+`;
+m(r('#header'));
+h(r('#main'));
