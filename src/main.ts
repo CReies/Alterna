@@ -1,8 +1,12 @@
 import '../public/assets/css/style.scss';
-import { setupHeader } from './components/header';
+import { setupHeader } from './components/Header';
+import { setupMain } from './components/Main';
+import { $ } from './util/functions';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <header id="header"></header>
+  <main id="main"></main>
 `;
 
-setupHeader(document.querySelector<HTMLElement>('#header')!);
+setupHeader($('#header'));
+setupMain($('#main'));
