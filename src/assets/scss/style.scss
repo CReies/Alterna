@@ -175,4 +175,37 @@ main {
 			margin-top: 4em;
 		}
 	}
+
+	.modal {
+		.modal-overlay {
+			width: 100vw;
+			height: 100vh;
+			position: fixed;
+			background-color: #000000aa;
+			top: 0;
+			z-index: 2000;
+			justify-content: center;
+			align-items: center;
+
+			.modal-body {
+				display: flex;
+				border-radius: 2em;
+				background: #e0e0e0;
+				padding: 1em 2em;
+				min-width: 50vw;
+				min-height: 50vh;
+				flex-direction: column;
+				justify-content: space-around;
+
+				.modal-header {
+					border-bottom: #bebebe 1px solid;
+					width: 100%;
+					margin-bottom: 5em;
+				}
+
+				.modal-content {
+				}
+			}
+		}
+	}
 }

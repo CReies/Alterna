@@ -1,0 +1,56 @@
+[
+	{
+		"name": "Mugs",
+		"description": "Mugs personalizados con cualquier foto o imágen.",
+		"prices": [
+			{ "name": "Blanco", "price": 12000 },
+			{ "name": "Luminiscente", "price": 15000 },
+			{ "name": "Mágico", "price": 20000 }
+		],
+		"images": [
+			"./src/assets/img/mug1.jpeg",
+			"./src/assets/img/mug2.jpeg",
+			"./src/assets/img/mug3.jpeg",
+			"./src/assets/img/mug4.jpeg",
+			"./src/assets/img/mug5.jpeg"
+		]
+	},
+	{
+		"name": "Posters",
+		"description": "Pósters personalizados en madera e impresión en vinilo full color.\n Si quieres otros tamaños también podemos hacerlo.Puedes personalizarlo con la foto o imagen que quieras.",
+		"prices": [
+			{ "name": "15x25", "price": 10000 },
+			{ "name": "20x30", "price": 12000 },
+			{ "name": "25x40", "price": 15000 },
+			{ "name": "50x70", "price": 55000 },
+			{ "name": "100x70", "price": 90000 },
+			{ "name": "Poliptico 1.50x90", "price": 110000 }
+		],
+		"images": [
+			"./src/assets/img/poster1.jpeg",
+			"./src/assets/img/poster2.jpeg",
+			"./src/assets/img/poster3.jpeg",
+			"./src/assets/img/poster4.jpeg",
+			"./src/assets/img/poster5.jpeg",
+			"./src/assets/img/poster6.jpeg",
+			"./src/assets/img/poster7.jpeg",
+			"./src/assets/img/poster8.jpeg",
+			"./src/assets/img/poster9.jpeg",
+			"./src/assets/img/poster10.jpeg",
+			"./src/assets/img/poster11.jpeg",
+			"./src/assets/img/poster12.jpeg",
+			"./src/assets/img/poster13.jpeg"
+		]
+	},
+	{
+		"name": "Relojes",
+		"description": "Relojes personalizados con la foto o imágen que desees.\nSi desean otra medida también se puede realizar",
+		"prices": [{ "name": "30x30", "price": 30000 }],
+		"images": [
+			"./src/assets/img/clock1.jpeg",
+			"./src/assets/img/clock2.jpeg",
+			"./src/assets/img/clock3.jpeg",
+			"./src/assets/img/clock4.jpeg"
+		]
+	}
+]

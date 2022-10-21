@@ -1,4 +1,5 @@
 import { $ } from '../util/functions';
+import { setupModal } from './Modal';
 import { setupProducts } from './Products';
 
 export function setupMain(el: HTMLElement) {
@@ -84,7 +85,9 @@ export function setupMain(el: HTMLElement) {
 				officiis possimus!
 			</p>
 		</section>
+		<div class="modal" id="modal"></div>
 	`;
 
 	setupProducts($('#products'));
+	setupModal($('#modal'));
 }
