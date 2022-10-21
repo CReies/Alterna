@@ -1,6 +1,6 @@
 import { $ } from '../util/functions';
 
-let visible = true;
+let visible = false;
 let header = '';
 let content = '';
 let modal: HTMLElement;
@@ -22,12 +22,18 @@ export function setupModal(el: HTMLElement) {
 		</div>
 	`;
 
-	$('#modalOverlay').addEventListener('click', () => setModalVisible(false));
+	$('#modalOverlay').addEventListener(
+		'click',
+		e => {
+			if (e.currentTarget !== e.target) return;
+			setModalVisible(false);
+		},
+		true
+	);
 }
 
 export function setModalVisible(val: boolean) {
 	visible = val;
-	console.log(header);
 	rerender();
 }
 

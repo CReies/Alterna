@@ -192,8 +192,7 @@ main {
 				border-radius: 2em;
 				background: #e0e0e0;
 				padding: 1em 2em;
-				min-width: 50vw;
-				min-height: 50vh;
+				width: 60vw;
 				flex-direction: column;
 				justify-content: space-around;
 
@@ -201,9 +200,36 @@ main {
 					border-bottom: #bebebe 1px solid;
 					width: 100%;
 					margin-bottom: 5em;
+					flex-direction: row;
+					display: flex;
+					justify-content: space-between;
+
+					button {
+						background: none;
+						border: none;
+					}
 				}
 
 				.modal-content {
+					display: flex;
+					flex-direction: row;
+
+					.img-container {
+						display: flex;
+						flex: 1;
+						flex-direction: row;
+						align-items: center;
+						justify-content: center;
+						img {
+							width: 90%;
+							border-radius: 2em;
+						}
+					}
+
+					.product-detail {
+						flex: 3;
+						text-align: right;
+					}
 				}
 			}
 		}
